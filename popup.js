@@ -26,6 +26,7 @@ const defaultKeybinds = {
 const defaultExtraOptions = {
   skip_enabled:   false,
   skip_threshold: 500,
+  seek_amount:    5,
 }
 
 let currentKeybinds = Object.assign({}, defaultKeybinds);
@@ -145,7 +146,10 @@ function getUpdatedOptions( updatedExtraOpts )
   
   // save skip threshold
   updatedExtraOpts.skip_threshold = document.getElementById( "extra_options_skip_threshold" ).valueAsNumber
-
+  
+  // save seek amount
+  updatedExtraOpts.seek_amount = document.getElementById( "extra_options_seek_amount" ).valueAsNumber
+  
   return updatedExtraOpts
 }
 
@@ -156,7 +160,9 @@ function initOptions( options )
   
   // set skip threshold
   document.getElementById( "extra_options_skip_threshold" ).value = options.skip_threshold
+  
+  // set skip threshold
+  document.getElementById( "extra_options_seek_amount" ).value = options.seek_amount
 
   console.log( `[Better Youtube Shorts] :: Intitialised Options` )
-  
 }

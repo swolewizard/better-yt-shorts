@@ -2,6 +2,7 @@ const defaultKeybinds = {'Seek Backward': 'arrowleft','Seek Forward': 'arrowrigh
 const defaultExtraOptions = {
   skip_enabled:   false,
   skip_threshold: 500,
+  seek_amount:    5, 
 }
 const storage = (typeof browser === 'undefined') ? chrome.storage.local : browser.storage.local;
 var muted = false;
@@ -9,8 +10,6 @@ var volumeState = 0;
 var actualVolume = 0;
 var skippedId = null
 var topId = 0 // store the furthest id in the chain
-
-const HEIGHT_OF_PLAYER = 833
 
 function shouldSkipShort( currentId, likeCount )
 {
@@ -80,11 +79,11 @@ document.addEventListener("keydown", (data) => {
   if (!command) return;
   switch (command) {
     case "Seek Backward":
-      ytShorts.currentTime -= 5;
+      ytShorts.currentTime -= extraOptions.seek_amount;
       break;
 
     case "Seek Forward":
-      ytShorts.currentTime += 5;
+      ytShorts.currentTime += extraOptions.seek_amount;
       break;
 
     case "Decrease Speed":

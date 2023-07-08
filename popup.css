@@ -23,6 +23,18 @@
 	--call-to-action-color: #3978e6;
 }
 
+:where(
+  h1,
+  h2,
+  h3,
+  td,
+  tr,
+  table,
+  label
+){
+  color: var(--text-primary-color);
+}
+
 body {
 	font-family: 'Source Sans Pro', 'Roboto', 'Noto', 'Arial', sans-serif;
 	background: var(--bg-primary-color);
@@ -280,9 +292,10 @@ a {
   border: 1px var( --bg-secondary-hover-color ) solid;
   background: var( --bg-secondary-hover-color );
   color: var(--text-primary-color);
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 100vh;
   width: 5rem;
+  height: fit-content;
 }
 .extra_options--row input[type="number"]:focus,
 .extra_options--row input[type="text"]:focus
