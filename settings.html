@@ -1,0 +1,26 @@
+<link href="popup.css"    rel="stylesheet" type="text/css" />
+<link href="settings.css" rel="stylesheet" type="text/css" />
+<script type="module" src="settings.js"></script>
+
+<div class="container" data-theme="light">
+  <div class="title-container">
+    <div>
+      <div class="title">Better Youtube Shorts</div>
+      <div class="version">v<span id="version"></span></div>
+    </div>
+    <div class="icon-container">
+      <svg id="bys_home_button" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false"><g><path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path></g></svg>
+      <img src="/icons/byts48.png" alt="logo" height="24px" width="auto">
+    </div>
+  </div>
+  <div class="separation-line" style="margin-top:5px;opacity:0.9"></div>
+  
+  <div>
+    <h3>Settings</h3>
+    <p>Toggle certain features on and off</p>
+    <ul id="settings_list"></ul> <!-- Populated via settings.js -->
+  </div>
+
+  <div class="footer prevent-selection">Reload the page for changes to take effect.</div>
+  <div class="btn-wrapper"><a href="https://github.com/ynshung/better-yt-shorts" target="_blank"><span class="btn">GitHub</span></a></div>
+</div>

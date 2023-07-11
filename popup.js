@@ -7,6 +7,7 @@ const resetBtn = document.querySelector(".reset-btn");
 const editBtnList = document.querySelectorAll(".edit-btn");
 const closeBtn = document.querySelector(".close-btn");
 const keybindInput = document.getElementById("keybind-input");
+const settingsCog = document.getElementById( "bys_settings_cog" )
 let modalTitleSpan = document.getElementById("modal-title-span");
 let invalidKeybinds = ['backspace', 'enter', 'escape', 'tab', ' ', 'space', 'pageup', 'pagedown', 'arrowup', 'arrowdown', 'printscreen', 'meta'];
 
@@ -108,3 +109,7 @@ keybindInput.addEventListener('keydown', (event) => {
         closeBtn.click(); 
     });
 });
+
+settingsCog.addEventListener( "click", e => {
+  window.location.href = "/settings.html"
+} )
